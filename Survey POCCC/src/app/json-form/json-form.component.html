@@ -1,0 +1,18 @@
+<form [formGroup]="myForm">
+  <div *ngFor="let control of surveyForm">
+    <label>{{ control.label }}</label>
+    <input
+      [type]="control.type"
+      [formControlName]="control.name"
+      [value]="control.value"
+    />
+    <button type="submit">Submit</button>
+
+    <h2>this montb is APrill</h2>
+    <input matInput placeholder="Ex. Pizza" value="Sushi" />
+  </div>
+</form>
+
+<!-- <form [formGroup]="myForm">
+  <label *ngFor="let control of surveyForm">{{ control.label }}...</label>
+</form> -->
